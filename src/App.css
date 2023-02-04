@@ -25,3 +25,11 @@ span {
   border: 1px solid transparent;
   background-color: #1a1a1a;
 }
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}

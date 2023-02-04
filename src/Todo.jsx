@@ -30,24 +30,20 @@ function Todo() {
   return (
     <div className="todo-wrapper">
       <h1>TO-DO</h1>
-
-
       <Form onSubmit={handleAddItemToList}>
-
-        <input type="text" placeholder='Add new task' onChange={handleChangeInput} value={task} />
-        
+        <Input type="text" placeholder='Add new task' onChange={handleChangeInput} value={task} />
         <Button type='submit'>Create</Button>
-      
       </Form>
-
       <div className='tasks'>
         <p>Created Tasks<span>0</span></p>
         <p>Done Tasks<span>0 de 0</span></p>
       </div>
-      
-      <List itemList={itemList}/>
+      <List itemList={itemList} />
     </div>
   )
 }
 
 export default Todo
+
+// Marcar tarefa como feita
+// Excluir tarefa
