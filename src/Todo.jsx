@@ -4,6 +4,7 @@ import List from './compomemts/List';
 import Form from './compomemts/Form';
 import Input from './compomemts/Input';
 import Button from './compomemts/Button';
+import ButtonDelete from './compomemts/ButtonDelete';
 
 import './App.css'
 
@@ -27,6 +28,10 @@ function Todo() {
     setTask("")
   }
 
+  const handleDelete = index => {
+    setItemList(itemList.filter((_, i) => i !== index));
+  };
+
   return (
     <div className="todo-wrapper">
       <h1>TO-DO</h1>
@@ -38,7 +43,15 @@ function Todo() {
         <p>Created Tasks<span>0</span></p>
         <p>Done Tasks<span>0 de 0</span></p>
       </div>
-      <List itemList={itemList} />
+      <ul className='todo-list'>
+        {itemList.map((item, index) => (
+          <li key={index}>{item}
+          <button type="button" onClick={() => handleDelete(index)}>X</button>
+          </li>
+          ))}
+        </ul>
+      {/* <List itemList={itemList}
+      /> */}
     </div>
   )
 }
