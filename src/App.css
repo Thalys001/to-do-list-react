@@ -33,3 +33,29 @@ span {
   gap: 10px;
   list-style: none;
 }
+
+.todo-list li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 5px 40px;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+.checkbox-list {
+  width: 20px;
+}
+
+.button-list {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.1em 0.5em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}

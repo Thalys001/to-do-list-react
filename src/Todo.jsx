@@ -46,8 +46,8 @@ function Todo() {
       <ul className='todo-list'>
         {itemList.map((item, index) => (
           <li key={index}>{item}
-          <input type="checkbox" defaultChecked={true} />
-          <button type="button" onClick={() => handleDelete(index)}>X</button>
+          <input className='checkbox-list' type="checkbox" defaultChecked={true} />
+          <button className='button-list' type="button" onClick={() => handleDelete(index)}>x</button>
           </li>
           ))}
         </ul>
