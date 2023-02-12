@@ -36,7 +36,7 @@ function Todo() {
     <div className="todo-wrapper">
       <h1>TO-DO</h1>
       <Form onSubmit={handleAddItemToList}>
-        <Input type="text" placeholder='Add new task' onChange={handleChangeInput} value={task} />
+        <Input type="text" placeholder=' + Add new task' onChange={handleChangeInput} value={task} />
         <Button type='submit'>Create</Button>
       </Form>
       <div className='tasks'>
@@ -46,7 +46,7 @@ function Todo() {
       <ul className='todo-list'>
         {itemList.map((item, index) => (
           <li key={index}>{item}
-          <input className='checkbox-list' type="checkbox" defaultChecked={true} />
+          {/* <input className='checkbox-list' type="checkbox" defaultChecked={true} /> */}
           <button className='button-list' type="button" onClick={() => handleDelete(index)}>x</button>
           </li>
           ))}
